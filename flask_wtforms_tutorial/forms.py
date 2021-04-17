@@ -11,15 +11,21 @@ from wtforms import (
 from datetime import date
 from wtforms.fields.html5 import DateField
 from wtforms.validators import URL, DataRequired, Email, EqualTo, Length
+import csv
 
 class StockForm(FlaskForm):
     """Generate Your Graph."""
+    checkSym = https://www.alphavantage.co/query?function=LISTING_STATUS&apikey=65210ZZ38CVFIWM4
+
     
+    data = requests.get(apistring).json()
     #THIS IS WHERE YOU WILL IMPLEMENT CODE TO POPULATE THE SYMBOL FIELD WITH STOCK OPTIONS
     symbol = SelectField("Choose Stock Symbol",[DataRequired()],
         choices=[
             ("IBM", "IBM"),
             ("GOOGL", "GOOGL"),
+
+            
         ],
     )
 
@@ -27,6 +33,7 @@ class StockForm(FlaskForm):
         choices=[
             ("1", "1. Bar"),
             ("2", "2. Line"),
+            checksym = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + symbol + "&apikey=" + api_key
         ],
     )
 
